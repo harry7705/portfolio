@@ -24,11 +24,10 @@ const greeting = {
   username: "Himanshu kumar",
   title: "Hi all, I'm Himanshu",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web applications with JavaScript / Reactjs / Nodejs / React Native / Python and some other cool libraries and frameworks."
+    "A passionate Full Stack Software Developer 🚀 ..."
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1m3vCvz_iVJIpprXmxzduODIKzBmpuVAN/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+  resumeLink: "/Himanshu_Resume.pdf",
+  displayGreeting: true
 };
 
 // Social Media Links
@@ -126,20 +125,6 @@ const educationInfo = {
       subHeader:
         "Currently, I'm pursuing my B.Tech specialization in Computer Science Engineering branch from Allenhouse Institute of Technology Kanpur.",
       duration: "September 2022 - April 2026"
-    },
-    {
-      schoolName: "Intermediate",
-      logo: require("./assets/images/upboard.png"),
-      subHeader:
-        "I completed my 12th in 2020 from Bhartiya intermediate college Ghorawal, affiliated by the UP Board.",
-      duration: "September 2018 - April 2020"
-    },
-    {
-      schoolName: "High School",
-      logo: require("./assets/images/upboard.png"),
-      subHeader:
-        "I completed my 10th in 2018 from Bhartiya intermediate college Ghorawal, affiliated by the UP Board.",
-      duration: "September 2016 - April 2018"
     }
   ]
 };

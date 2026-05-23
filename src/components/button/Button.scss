@@ -1,47 +1,102 @@
 @import "../../_globalColor";
 
+/* Main Button */
 .main-button {
   background-color: $buttonColor;
   border: solid 1px $buttonColor;
   color: $textColorDark;
+
   font-weight: 700;
-  width: max-content;
-  padding: 13px 22px;
-  margin-right: 50px;
-  text-transform: uppercase;
-  border-radius: 6px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  margin-top: 20px;
   font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  width: max-content;
+
+  padding: 13px 22px;
+  margin-right: 20px;
+  margin-top: 20px;
+
+  border-radius: 6px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
+
+  transition: all 0.3s ease-in-out;
 }
+
+/* Hover Effect */
 .main-button:hover {
   background-color: $darkBoxShadow2;
   color: $buttonColor;
-  transition: all 0.3s ease 0s;
+
   transform: translateY(-3px);
+
+  transition: all 0.3s ease;
 }
+
+/* Project Button Section */
 .project-button {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
   margin-top: 20px;
 }
+
+/* Remove extra margin inside project section */
 .project-button > .main-button {
   margin-right: 0 !important;
+  margin-top: 0 !important;
 }
-/* Media Query */
+
+/* =========================
+   Tablet & Mobile
+========================= */
 @media (max-width: 768px) {
   .main-button {
-    font-size: 0.938rem;
-    padding: 12px 18px;
-    margin-right: 0px;
+    font-size: 0.9rem;
+
+    padding: 11px 16px;
+
+    margin-right: 8px;
+    margin-top: 15px;
+  }
+
+  .project-button {
+    gap: 8px;
   }
 }
+
+/* =========================
+   Small Mobile
+========================= */
+@media (max-width: 480px) {
+  .main-button {
+    font-size: 0.82rem;
+
+    padding: 10px 14px;
+
+    margin-right: 6px;
+  }
+
+  .project-button {
+    gap: 6px;
+  }
+}
+
+/* =========================
+   Very Small Devices
+========================= */
 @media (max-width: 320px) {
   .main-button {
     font-size: 0.75rem;
+
+    padding: 8px 12px;
   }
 }
