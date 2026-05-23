@@ -1,7 +1,7 @@
 import React from "react";
 import "./OrganizationCard.scss";
 
-export default function OrganizationCard({ organization, isDark }) {
+export default function OrganizationCard({organization, isDark}) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL for ${name} not found`);
@@ -16,16 +16,10 @@ export default function OrganizationCard({ organization, isDark }) {
   }
 
   return (
-    <div
-      onClick={() =>
-        openUrlInNewTab(organization.url, organization.title)
-      }
-    >
+    <div onClick={() => openUrlInNewTab(organization.url, organization.title)}>
       <div
         className={
-          isDark
-            ? "organization-container dark-mode"
-            : "organization-container"
+          isDark ? "organization-container dark-mode" : "organization-container"
         }
       >
         <a
@@ -48,9 +42,7 @@ export default function OrganizationCard({ organization, isDark }) {
           {/* Title */}
           <h3
             className={
-              isDark
-                ? "small-dark organization-title"
-                : "organization-title"
+              isDark ? "small-dark organization-title" : "organization-title"
             }
           >
             {organization.title}
@@ -64,9 +56,7 @@ export default function OrganizationCard({ organization, isDark }) {
           {/* Buttons */}
           <div className="organization-footer">
             {organization.website && (
-              <span className="organization-button">
-                Website
-              </span>
+              <span className="organization-button">Website</span>
             )}
 
             {organization.github && (

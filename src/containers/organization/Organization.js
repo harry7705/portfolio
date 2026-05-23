@@ -1,7 +1,7 @@
 import React from "react";
 import "./Organization.scss";
-import { Fade } from "react-reveal";
-import { organizationSection } from "../../portfolio";
+import {Fade} from "react-reveal";
+import {organizationSection} from "../../portfolio";
 
 export default function Organization() {
   if (!organizationSection.display) {
@@ -32,34 +32,28 @@ export default function Organization() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-
                     {/* DP / Logo */}
                     <div className="organization-logo-div">
                       <img
                         src={org.logo}
                         alt={org.name}
                         className="organization-logo"
-                        onError={(e) => console.log("Image failed:", e.target.src)}
+                        onError={e =>
+                          console.log("Image failed:", e.target.src)
+                        }
                       />
                     </div>
 
                     {/* Name */}
-                    <h3 className="organization-title">
-                      {org.name}
-                    </h3>
+                    <h3 className="organization-title">{org.name}</h3>
 
                     {/* Description */}
-                    <p className="small">
-                      {org.description}
-                    </p>
+                    <p className="small">{org.description}</p>
 
                     {/* Arrow */}
                     <div className="go-corner">
-                      <div className="go-arrow">
-                        →
-                      </div>
+                      <div className="go-arrow">→</div>
                     </div>
-
                   </a>
                 </div>
               </div>

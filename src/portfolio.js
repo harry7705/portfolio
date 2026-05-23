@@ -52,9 +52,7 @@ const skillsSection = {
       "⚡ Develop highly interactive Front end / User Interfaces for your web applications"
     ),
     emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS"
-    )
+    emoji("⚡ Integration of third party services such as Firebase/ AWS")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -108,7 +106,8 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "docker",
       fontAwesomeClassname: "fab fa-docker"
-    },{
+    },
+    {
       skillName: "sass",
       fontAwesomeClassname: "fab fa-sass"
     }
@@ -124,20 +123,23 @@ const educationInfo = {
     {
       schoolName: "Bachelor of Science in Computer Science",
       logo: require("./assets/images/allenhouselogo.jpg"),
-      subHeader: "Currently, I'm pursuing my B.Tech specialization in Computer Science Engineering branch from Allenhouse Institute of Technology Kanpur.",
-      duration: "September 2022 - April 2026",
+      subHeader:
+        "Currently, I'm pursuing my B.Tech specialization in Computer Science Engineering branch from Allenhouse Institute of Technology Kanpur.",
+      duration: "September 2022 - April 2026"
     },
     {
       schoolName: "Intermediate",
       logo: require("./assets/images/upboard.png"),
-      subHeader: "I completed my 12th in 2020 from Bhartiya intermediate college Ghorawal, affiliated by the UP Board.",
-      duration: "September 2018 - April 2020",
+      subHeader:
+        "I completed my 12th in 2020 from Bhartiya intermediate college Ghorawal, affiliated by the UP Board.",
+      duration: "September 2018 - April 2020"
     },
     {
       schoolName: "High School",
       logo: require("./assets/images/upboard.png"),
-      subHeader: "I completed my 10th in 2018 from Bhartiya intermediate college Ghorawal, affiliated by the UP Board.",
-      duration: "September 2016 - April 2018",
+      subHeader:
+        "I completed my 10th in 2018 from Bhartiya intermediate college Ghorawal, affiliated by the UP Board.",
+      duration: "September 2016 - April 2018"
     }
   ]
 };
@@ -212,7 +214,8 @@ const bigProjects = {
     {
       image: require("./assets/images/nexusailogo.png"),
       projectName: "Student Management System",
-      projectDesc: "A full-featured Student Management System built with Django that helps manage students, teachers, attendance, results, and assignments in an organized and efficient way.",
+      projectDesc:
+        "A full-featured Student Management System built with Django that helps manage students, teachers, attendance, results, and assignments in an organized and efficient way.",
       footerLink: [
         {
           name: "View Project",
@@ -224,7 +227,8 @@ const bigProjects = {
     {
       image: require("./assets/images/erp.jpg"),
       projectName: "Nexus AI",
-      projectDesc: "A full-featured AI-powered Interview Simulator built with React + FastAPI that helps users practice HR, behavioral, and technical interviews with a real-time AI interviewer using voice and text.",
+      projectDesc:
+        "A full-featured AI-powered Interview Simulator built with React + FastAPI that helps users practice HR, behavioral, and technical interviews with a real-time AI interviewer using voice and text.",
       footerLink: [
         {
           name: "Visit Website Soon.",
@@ -271,7 +275,7 @@ const achievementSection = {
           url: "https://drive.google.com/file/d/1fdoO-oDYJXa42S7B5wbwd7pTdcAEiJl3/view?usp=sharing"
         }
       ]
-    },
+    }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -282,7 +286,10 @@ const organizationSection = {
   title: emoji("GitHub Organization 🚀"),
   subtitle: (
     <>
-      Building innovative AI and full-stack projects with collaborative open-source development and modern technologies. <strong>Anyone can join and contribute</strong> — don’t hesitate to collaborate, learn, and build amazing projects together with DevLabs77 🚀
+      Building innovative AI and full-stack projects with collaborative
+      open-source development and modern technologies.{" "}
+      <strong>Anyone can join and contribute</strong> — don’t hesitate to
+      collaborate, learn, and build amazing projects together with DevLabs77 🚀
     </>
   ),
 
@@ -315,7 +322,6 @@ const contactInfo = {
   number: "+91-0000000000",
   email_address: "harry7705@gmail.com"
 };
-
 
 const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 

@@ -11,10 +11,7 @@ export default function EducationCard({school}) {
     if (!descBullets) return null;
 
     return descBullets.map((item, i) => (
-      <li
-        key={i}
-        className={isDark ? "dark-mode subTitle" : "subTitle"}
-      >
+      <li key={i} className={isDark ? "dark-mode subTitle" : "subTitle"}>
         {item}
       </li>
     ));
@@ -30,7 +27,6 @@ export default function EducationCard({school}) {
     <div>
       <Fade bottom duration={1000} distance="20px">
         <div className="education-card">
-
           {/* Left Logo */}
           {school.logo && (
             <div className="education-card-left">
@@ -46,7 +42,6 @@ export default function EducationCard({school}) {
 
           {/* Right Content */}
           <div className="education-card-right">
-
             {/* School Name */}
             <h3
               className={
@@ -59,7 +54,6 @@ export default function EducationCard({school}) {
             </h3>
 
             <div className="education-text-details">
-
               {/* Degree */}
               <h5
                 className={
@@ -99,9 +93,7 @@ export default function EducationCard({school}) {
               {school.descBullets && (
                 <div className="education-text-bullets">
                   <ul>
-                    <GetDescBullets
-                      descBullets={school.descBullets}
-                    />
+                    <GetDescBullets descBullets={school.descBullets} />
                   </ul>
                 </div>
               )}
