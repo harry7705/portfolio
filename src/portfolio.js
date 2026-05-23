@@ -23,9 +23,7 @@ const illustration = {
 const greeting = {
   username: "Himanshu kumar",
   title: "Hi all, I'm Himanshu",
-  subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 ..."
-  ),
+  subTitle: emoji("A passionate Full Stack Software Developer 🚀 ..."),
   resumeLink: "/Himanshu_Resume.pdf",
   displayGreeting: true
 };
