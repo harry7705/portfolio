@@ -212,7 +212,7 @@ const bigProjects = {
   subtitle: "",
   projects: [
     {
-      image: require("./assets/images/nexusailogo.png"),
+      image: require("./assets/images/erp.jpg"),
       projectName: "Student Management System",
       projectDesc:
         "A full-featured Student Management System built with Django that helps manage students, teachers, attendance, results, and assignments in an organized and efficient way.",
@@ -225,7 +225,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/erp.jpg"),
+      image: require("./assets/images/nexusailogo.png"),
       projectName: "Nexus AI",
       projectDesc:
         "A full-featured AI-powered Interview Simulator built with React + FastAPI that helps users practice HR, behavioral, and technical interviews with a real-time AI interviewer using voice and text.",
@@ -319,8 +319,6 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+91-0000000000",
-  email_address: "harry7705@gmail.com"
 };
 
 const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
