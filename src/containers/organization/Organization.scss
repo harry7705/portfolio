@@ -1,0 +1,377 @@
+@import "../../_globalColor";
+
+/* =========================
+   Organization Layout
+========================= */
+
+.organization-main-div>* {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.organization-main-div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   Header
+========================= */
+
+.organization-header {
+  margin-bottom: 40px;
+}
+
+.organization-header-title {
+  font-size: 56px;
+  font-weight: 400;
+  color: white;
+}
+
+.organization-subtitle {
+  text-transform: uppercase;
+  color: $subTitle;
+}
+
+/* =========================
+   Grid Layout
+========================= */
+
+.organization-cards-div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  width: 100%;
+}
+
+/* =========================
+   Card Container
+========================= */
+
+.organization-container {
+  width: 100%;
+  overflow: hidden;
+
+  border-radius: 20px;
+  background-color: $lightBackground1;
+
+  box-shadow: 0 0 36px $lightBoxShadow;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.organization-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px $lightBoxShadow;
+}
+
+/* =========================
+   Dark Mode Container
+========================= */
+
+.dark-mode .organization-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+/* =========================
+   Main Card
+========================= */
+
+.organization-card {
+  position: relative;
+  display: block;
+
+  overflow: hidden;
+
+  padding: 2.5rem;
+  height: 100%;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+  text-align: center;
+
+  background: transparent;
+
+  z-index: 0;
+}
+
+/* =========================
+   Purple Hover Effect
+========================= */
+
+.organization-card::before {
+  content: "";
+  position: absolute;
+
+  z-index: -1;
+
+  top: 30%;
+  left: 50%;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  background: $buttonColor;
+
+  transform: translate(-50%, -50%) scale(0);
+
+  transition: transform 0.5s ease-out;
+}
+
+.organization-card:hover::before {
+  transform: translate(-50%, -50%) scale(25);
+}
+
+/* =========================
+   Logo
+========================= */
+
+.organization-logo-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 1.8rem;
+}
+
+.organization-logo {
+  width: 140px;
+  height: 140px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+  border: 4px solid $buttonColor;
+
+  background: white;
+
+  transition: all 0.3s ease;
+}
+
+.organization-card:hover .organization-logo {
+  transform: scale(1.08);
+  border-color: white;
+}
+
+/* =========================
+   Title
+========================= */
+
+.organization-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+
+  color: black !important;
+
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   Description
+========================= */
+
+.small {
+  font-size: 1rem;
+  font-weight: 400;
+
+  line-height: 1.8rem;
+
+  margin-bottom: 2rem;
+
+  color: black !important;
+
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   Light Hover Text
+========================= */
+
+.organization-card:hover .organization-title,
+.organization-card:hover .small {
+  color: white !important;
+}
+
+/* =========================
+   Dark Mode Text
+========================= */
+
+.dark-mode .organization-title,
+.dark-mode .small {
+  color: white !important;
+}
+
+/* =========================
+   Dark Mode Hover Text
+========================= */
+
+.dark-mode .organization-card:hover .organization-title,
+.dark-mode .organization-card:hover .small {
+  color: white !important;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.organization-footer {
+  display: flex;
+  justify-content: center;
+
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.organization-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  background: $buttonColor;
+  color: white;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.organization-button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Secondary Button
+========================= */
+
+.secondary-button {
+  background: transparent;
+
+  border: 1px solid $buttonColor;
+
+  color: $buttonColor;
+}
+
+.secondary-button:hover {
+  background: white;
+  color: $buttonColor;
+}
+
+/* =========================
+   Corner Effect
+========================= */
+
+.go-corner {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background-color: $buttonColor;
+
+  border-radius: 0 20px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+
+  color: white;
+
+  font-family: courier, sans;
+}
+
+/* =========================
+   Dark Text
+========================= */
+
+.small-dark {
+  color: $textColorDark !important;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1380px) {
+  .organization-header-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .organization-header-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .organization-subtitle {
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .organization-cards-div {
+    grid-template-columns: 1fr;
+  }
+
+  .organization-card {
+    padding: 1.5rem;
+  }
+
+  .organization-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .organization-footer {
+    flex-direction: column;
+  }
+
+  .organization-button {
+    width: 100%;
+  }
+
+  .organization-card:hover::before {
+    transform: translate(-50%, -50%) scale(18);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .organization-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .organization-title {
+    font-size: 1.3rem;
+  }
+
+  .small {
+    font-size: 0.95rem;
+  }
+}
