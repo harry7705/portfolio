@@ -212,7 +212,7 @@ const bigProjects = {
   subtitle: "",
   projects: [
     {
-      image: require("./assets/images/erp.jpg"),
+      image: require("./assets/images/erp-image.jpg"),
       projectName: "Student Management System",
       projectDesc:
         "A full-featured Student Management System built with Django that helps manage students, teachers, attendance, results, and assignments in an organized and efficient way.",
