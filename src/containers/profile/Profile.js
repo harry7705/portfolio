@@ -1,5 +1,5 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
-import { openSource } from "../../portfolio";
+import React, {useState, useEffect, lazy, Suspense} from "react";
+import {openSource} from "../../portfolio";
 import Contact from "../contact/Contact";
 import Loading from "../loading/Loading";
 
@@ -27,18 +27,14 @@ export default function Profile() {
             throw new Error("Failed to fetch profile data");
           })
           .then(response => {
-            if (
-              response &&
-              response.data &&
-              response.data.user
-            ) {
+            if (response && response.data && response.data.user) {
               setProfileFunction(response.data.user);
             } else {
               console.error("GitHub profile data not found");
               setProfileFunction(null);
             }
           })
-          .catch(function(error) {
+          .catch(function (error) {
             console.error(
               `${error} (because of this error GitHub contact section could not be displayed. Contact section has reverted to default)`
             );
@@ -52,17 +48,10 @@ export default function Profile() {
     }
   }, []);
 
-  if (
-    openSource.display &&
-    openSource.showGithubProfile === "true" &&
-    prof
-  ) {
+  if (openSource.display && openSource.showGithubProfile === "true" && prof) {
     return (
       <Suspense fallback={renderLoader()}>
-        <GithubProfileCard
-          prof={prof}
-          key={prof?.id || "github-profile"}
-        />
+        <GithubProfileCard prof={prof} key={prof?.id || "github-profile"} />
       </Suspense>
     );
   } else {
