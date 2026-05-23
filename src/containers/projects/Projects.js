@@ -1,7 +1,7 @@
-import React, {useState, useEffect, useContext, Suspense, lazy} from "react";
+import React, { useState, useEffect, useContext, Suspense, lazy } from "react";
 import "./Project.scss";
 import Button from "../../components/button/Button";
-import {openSource, socialMediaLinks} from "../../portfolio";
+import { openSource, socialMediaLinks } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import Loading from "../../containers/loading/Loading";
 export default function Projects() {
@@ -12,7 +12,7 @@ export default function Projects() {
   const renderLoader = () => <Loading />;
   const [repo, setrepo] = useState([]);
   // todo: remove useContex because is not supported
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
 
   useEffect(() => {
     const getRepoData = () => {
@@ -24,7 +24,18 @@ export default function Projects() {
           throw result;
         })
         .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
+          if (
+            response &&
+            response.data &&
+            response.data.user &&
+            response.data.user.pinnedItems &&
+            response.data.user.pinnedItems.edges
+          ) {
+            setrepoFunction(response.data.user.pinnedItems.edges);
+          } else {
+            console.error("Pinned items data not found");
+            setrepoFunction([]);
+          }
         })
         .catch(function (error) {
           console.error(
@@ -55,7 +66,7 @@ export default function Projects() {
                 );
               }
               return (
-                <GithubRepoCard repo={v} key={v.node.id} isDark={isDark} />
+                <GithubRepoCard repo={v} key={v?.node?.id || i} isDark={isDark} />
               );
             })}
           </div>
